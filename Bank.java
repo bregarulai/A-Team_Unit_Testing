@@ -14,13 +14,17 @@ import java.util.ArrayList;
 public class Bank {
     Bank() {        
     }
-    
+
     void addAccount() {
         // Creates a new bank account
     }
     
+    /**
+     * Deletes a given account
+     * @param accountId 
+     */
     void removeAccount(String accountId){
-        // Deletes a given account.
+       
     }
     
     void getAccounts() {
@@ -57,8 +61,8 @@ public class Bank {
         // Flavio
         // Get a list of Customer objects, given a customer's last and first names.
         // Assume customer names are unique.
-        List<Customer> c = new ArrayList<>();
-        return List<customer> c;
+//        List<Customer> c = new ArrayList<>();
+//        return List<customer> c;
     }    
     
     List<Account> getCustomersAccounts (String customerId) {
@@ -68,43 +72,8 @@ public class Bank {
     
     public static void main(String[] args) {
         // TODO code application logic here
-        
-        
+                
         Bank bank = new Bank();
         
     }
 }
-
-
-
-
-
-///*
-// * To change this license header, choose License Headers in Project Properties.
-// * To change this template file, choose Tools | Templates
-// * and open the template in the editor.
-// */
-//package bankofateam;
-//
-////import .bankutil;
-//
-///**
-// *
-// * @author Lucien & Sharon
-// */
-//public class BankOfATeam {
-//
-//    /**
-//     * @param args the command line arguments
-//     */
-//    public static void main(String[] args) {
-//        // TODO code application logic here
-//        
-//        
-//        Bank bank = new Bank();
-//        
-//    }
-//
-//
-//    
-//}
