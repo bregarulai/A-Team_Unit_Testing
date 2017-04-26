@@ -9,6 +9,10 @@ import java.util.List;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
+/**
+ *
+ * @author Sharon    // add your name here if you worked on it too!
+ */
 public class BankTest {
 
     @Test
@@ -35,7 +39,7 @@ public class BankTest {
         assertNotEquals(CUSTOMER_1_ID, CUSTOMER_2_ID);                           // both are null
         List<Customer> custList = instance.getCustomer( lastName1, firstName1 ); // NullPointerException
         assertEquals( 2, custList.size() );                                      // checkiing to see if list has 2 items
-        custList = instance.removeCustomer(CUSTOMER_2_ID);                       // remove a customer
+        instance.removeCustomer(CUSTOMER_2_ID);                       // remove a customer
         assertEquals(1, custList.size());                                        // checking to see if removeCustomer worked
         
     }
@@ -43,15 +47,15 @@ public class BankTest {
     @Test
     public void testAddCustomer() {
         System.out.println("addCustomer");
-        final String lastName1 = "Doe";
-        final String firstName1 = "Jane";
-        String expResult = lastName1 + firstName1;
-        final Bank instance = new Bank ("Test-Bank");
-        final String result = instance.addCustomer( lastName1, firstName1 );     // checking to see if addCustomer worked
-        System.out.println(result + expResult);
-        assertEquals(expResult, result);                                         // result is null                         
-        List<Customer> custList = instance.addCustomer( lastName1, firstName1 ); // NullPointerException
+        final String lastName = "Doe";
+        final String firstName = "Jane";
+        final Bank bank = new Bank ("Test-Bank");
+        final String result = bank.addCustomer( lastName, firstName );     // checking to see if addCustomer worked
+        Customer customer = new Customer(bank, lastName, firstName);
+        List<Customer> custList = new List<>(customer); 
+        String expResult = lastName + firstName;
         assertEquals(1, custList.size());                                        // checking to see if it added a customer        
+        assertEquals(expResult, result);                                         // result is null                         
 
         // test for null
         String customerId = null;  

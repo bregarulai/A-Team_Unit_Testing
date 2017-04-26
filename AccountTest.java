@@ -1,20 +1,16 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/** @author Flavio Aquino, Sharon Tender, Frank Castillo,
+ *  April 2017
+ * 
+ *  Class responsible for testing Account.java
  */
 package banking;
 
-import java.time.LocalDateTime;
-import java.util.List;
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
  *
- * @author Lucien & Sharon
+ * @author Sharon    // add your name here if you worked on it too!
  */
 public class AccountTest {
     
@@ -27,12 +23,16 @@ public class AccountTest {
     @Test
     public void testDeposit() {
         System.out.println("deposit");
-        double amount = 23.00;
-        Account account = new Account("test");
-        double result = account.deposit(amount);  
-        double expResult = 23.00;
-        assertTrue(expResult == result);
-        assertFalse("Deposit does not equal null: ", result != 0);
+        final String lastName = "Doe";
+        final String firstName = "Jane";
+        double amount = 0.00;
+        Bank bank = new Bank("Test Bank");
+        Customer customer = new Customer(bank, lastName, firstName);
+        Account account = new SavingsAccount(customer, amount, "description");
+        account.deposit(amount);                          // don't know where to go from here                            
+        double expResult = 0.00;
+        assertTrue(expResult == amount);
+        assertFalse("Deposit does not equal 0: ", amount != 0.00);
     }
 
     /**
@@ -50,7 +50,19 @@ public class AccountTest {
     @Test
     public void testTransfer() {
         System.out.println("transfer");
-
+        System.out.println("deposit");
+        final String lastName = "Doe";
+        final String firstName = "Jane";
+        final String lastName2 = "Dont";
+        final String firstName2 = "John";
+        double amount = 0.00;
+        Bank bank = new Bank("Test Bank");
+        Customer fromCustomer = new Customer(bank, lastName, firstName);
+        Customer toCustomer = new Customer(bank, lastName2, firstName2);
+        Account fromAccount = new SavingsAccount(fromCustomer, amount, "description");
+        Account toAccount = new SavingsAccount(toCustomer, amount, "descriptin");
+        banking.Account.transfer(fromAccount, toAccount, amount);
+        assertTrue(fromAccount != toAccount);
     }
 
     /**
