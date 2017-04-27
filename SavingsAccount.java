@@ -1,6 +1,4 @@
-package banking;
 
-import static com.wpollock.bank.TransactionType.*;
 
 /**
  * @author wpollock
