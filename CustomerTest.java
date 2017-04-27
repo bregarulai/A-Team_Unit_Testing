@@ -25,5 +25,13 @@ public class CustomerTest {
 		fail("Not yet implemented");
 	}
 	
+	@Test
+	public void testGetBank() {
+		String bankName = "new bank";
+		Bank myBank = new Bank(bankName);
+		assertNotNull(myBank);
+		
+		fail("Not yet implemented");
+	}
 
 }
