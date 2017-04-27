@@ -1,1 +1,15 @@
+.settings
+.project
+.classpath
+target/
+test-output/
+node_modules/**
+.orig
+/Account.class
+/Bank.class
+/Customer.class
 /CustomerTest.class
+/SavingsAccount.class
+/Transaction.class
+/README.md
+/TransactionType.class
