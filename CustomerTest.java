@@ -20,7 +20,7 @@ public class CustomerTest {
 		String firstName = "John";
 		
 		Customer johnDoe = new Customer(myBank, lastName, firstName);
-		
+		assertNotNull(johnDoe);
 		
 		fail("Not yet implemented");
 	}
