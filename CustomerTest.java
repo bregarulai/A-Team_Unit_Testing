@@ -36,5 +36,18 @@ public class CustomerTest {
 		fail("Not yet implemented");
 	}
 
-
+	@Test
+	public void testGetCustomerAccounts() {
+		Bank bank = new Bank("New Bank");
+		Customer cust = new Customer(bank, "John", "Doe");
+		Account account = new SavingsAccount(cust, 123.34, "Savings");
+		
+		Set<Account> accounts = new TreeSet<>();
+		accounts.add(account);
+		assertNotNull(accounts);
+		
+		fail("Not yet implemented");
+		
+		
+	}
 }
