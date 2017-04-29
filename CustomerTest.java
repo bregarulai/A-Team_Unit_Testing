@@ -47,7 +47,16 @@ public class CustomerTest {
 		assertNotNull(accounts);
 		
 		fail("Not yet implemented");
-		
+				
+	}
+	
+	@Test
+	public void testYtdFees() {
+		Bank bank = new Bank("New Bank");
+		Customer cust = new Customer(bank, "John", "Doe");
+		Account account = new SavingsAccount(cust, 123.34, "Savings");
+		double result = 123.34 * 2.0;
+		assertEquals(result, account.get);
 		
 	}
 }
