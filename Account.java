@@ -74,6 +74,13 @@ public abstract class Account implements Comparable<Account> {
     public double getBalance() {
         return 0.00;  // Stub
     }
+    
+    /**
+     * @return The current Customer
+     */
+    public Customer getCustomer() {
+    	return this.customer;
+    }
 
     /**
      * @return read-only view of the account's transaction list
