@@ -51,7 +51,7 @@ public class CustomerTest {
 	}
 	
 	@Test
-	public void testYtdFees() {
+	public void testYtdInterst() {
 		Bank bank = new Bank("New Bank");
 		Customer cust = new Customer(bank, "John", "Doe");
 		Account account = new SavingsAccount(cust, 123.34, "Savings");
