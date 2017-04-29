@@ -57,7 +57,18 @@ public class CustomerTest {
 		Account account = new SavingsAccount(cust, 123.34, "Savings");
 		final double DELTA = 1E-5;
 		double result = 123.34 * 2.0;
-		assertEquals(result, account.getCustomer().ytdFees(), DELTA);
+		assertEquals(result, account.getCustomer().ytdFees(), DELTA);	
+		
+		fail("Not yet implemented");
+	}
+	
+	@Test
+	public void testAddSavingsAccount() {
+		Bank bank = new Bank("New Bank");
+		Customer cust = new Customer(bank, "John", "Doe");
+		assertNotNull(cust.addSavingsAccount(1233.23, "Savings"));
+		
+		fail("Not yet implemented");
 		
 	}
 }
