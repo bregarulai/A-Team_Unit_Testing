@@ -4,12 +4,9 @@ import java.util.*;
 
 import org.junit.Test;
 
-/**
- * 
- */
 
 /**
- * @author Flavio Luis
+ * @author Flavio Luis, Sharon Tender, Frank Castillo
  *
  */
 public class CustomerTest {
