@@ -71,4 +71,57 @@ public class CustomerTest {
 		fail("Not yet implemented");
 		
 	}
+	
+	@Test
+	public void testRemoveAccount() {
+		Bank bank = new Bank("New Bank");
+		Customer cust = new Customer(bank, "John", "Doe");
+		Account account = new SavingsAccount(cust, 123.34, "Savings");
+		account = cust.addSavingsAccount(1234, "Savings");
+		
+		cust.removeAccount(cust.getCustomerId());
+		assertNull(account);
+		fail("Account was not removed");
+	}
+	
+	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
