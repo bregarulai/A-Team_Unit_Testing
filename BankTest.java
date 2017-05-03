@@ -19,4 +19,13 @@ public class BankTest {
 		String result = cust.getCustomerId();
 		assertEquals(result, bank.addCustomer("Doe", "John"));		
 	}
+	
+	@Test
+	public void testRemoveCustomer() {
+		Bank bank = new Bank("My Bank");
+		Customer cust = new Customer(bank, "John", "Doe");
+		String customerId = bank.addCustomer("Doe", "John");
+		bank.removeCustomer(customerId);
+		assertNull(bank.getCustomer(customerId));	
+	}
 }
