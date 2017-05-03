@@ -27,7 +27,8 @@ public class CustomerTest {
 	public void testGetBank() {
 		String bankName = "new bank";
 		Bank myBank = new Bank(bankName);
-		assertNotNull(myBank);
+		Customer cust = new Customer(myBank, "John", "Doe");
+		assertNotNull(cust.getBank());
 		
 	}
 
@@ -35,12 +36,7 @@ public class CustomerTest {
 	public void testGetCustomerAccounts() {
 		Bank bank = new Bank("New Bank");
 		Customer cust = new Customer(bank, "John", "Doe");
-		Account account = new SavingsAccount(cust, 123.34, "Savings");
-		
-		Set<Account> accounts = new TreeSet<>();
-		accounts.add(account);
-		assertNotNull(accounts);
-						
+		assertNotNull(cust.getCustomerAccounts());						
 	}
 	
 	@Test
