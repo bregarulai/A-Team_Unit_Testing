@@ -15,7 +15,6 @@ public class AccountTest {
 		Account.transfer(account2, account1, 50.00);
 		assertEquals(result, account1.getBalance(), DELTA);
 		
-		fail("Not yet implemented");
 	}
 
 }
