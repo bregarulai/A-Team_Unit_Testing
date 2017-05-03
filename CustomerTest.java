@@ -21,30 +21,22 @@ public class CustomerTest {
 		Customer johnDoe = new Customer(myBank, lastName, firstName);
 		assertNotNull(johnDoe);
 		
-		fail("Not yet implemented");
 	}
 	
 	@Test
 	public void testGetBank() {
 		String bankName = "new bank";
 		Bank myBank = new Bank(bankName);
-		assertNotNull(myBank);
+		Customer cust = new Customer(myBank, "John", "Doe");
+		assertNotNull(cust.getBank());
 		
-		fail("Not yet implemented");
 	}
 
 	@Test
 	public void testGetCustomerAccounts() {
 		Bank bank = new Bank("New Bank");
 		Customer cust = new Customer(bank, "John", "Doe");
-		Account account = new SavingsAccount(cust, 123.34, "Savings");
-		
-		Set<Account> accounts = new TreeSet<>();
-		accounts.add(account);
-		assertNotNull(accounts);
-		
-		fail("Not yet implemented");
-				
+		assertNotNull(cust.getCustomerAccounts());						
 	}
 	
 	@Test
@@ -56,7 +48,6 @@ public class CustomerTest {
 		double result = 123.34 * 2.0;
 		assertEquals(result, account.getCustomer().ytdFees(), DELTA);	
 		
-		fail("Not yet implemented");
 	}
 	
 	@Test
@@ -64,9 +55,7 @@ public class CustomerTest {
 		Bank bank = new Bank("New Bank");
 		Customer cust = new Customer(bank, "John", "Doe");
 		assertNotNull(cust.addSavingsAccount(1233.23, "Savings"));
-		
-		fail("Not yet implemented");
-		
+				
 	}
 	
 	@Test
@@ -78,10 +67,9 @@ public class CustomerTest {
 		
 		cust.removeAccount(cust.getCustomerId());
 		assertNull(account);
-		fail("Account was not removed");
+
 	}
-	
-	
+		
 }
 
 
