@@ -14,3 +14,4 @@ node_modules/**
 /README.md
 /TransactionType.class
 /AccountTest.class
+/BankTest.class
